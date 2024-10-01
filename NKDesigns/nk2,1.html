@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NK designs</title>
+    <style>
+        /* Reset some default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: times new roman, sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background-color: 		#faffd5;
+        }
+
+        /* Navigation */
+        .navbar {
+            background-color:				#5b7b7a;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar .logo {
+            font-size: 28px;
+            font-weight: bold;
+font-family:Verdana , sans-serif;
+            line-height: 1.7;
+
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .navbar ul li {
+            margin-left: 28px;
+        }
+
+        .navbar ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .navbar ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('file:///C:/Users/Abhishek.c/Downloads/Gemini_Generated_Image_1f5kb71f5kb71f5k.jpeg') no-repeat center center/cover;
+            height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: 				#C0C0C0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-family: . Riven,sans-serif;
+            font-size: 48px;
+            margin-bottom: 550px;
+            text-shadow: 1px 1px 1px #000;
+        }
+
+        .hero p {
+            font-size: 25px;
+            text-shadow: 1px 1px 2px #000;
+font-family:	Brush Script MT , sans-serif;
+            line-height: 1.7;
+
+        }
+
+        /* About Section */
+        .about, .services, .gallery, .contact {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: auto;
+
+
+        }
+
+        .about h2, .services h2, .gallery h2, .contact h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #004080;
+
+        }
+
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center; 
+
+        }
+
+        .about-content img {
+            flex: 1;
+            max-width: 500px;
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-right: 20px;
+ text-decoration: underline;
+        }
+
+        .about-content div {
+            flex: 2;
+        }
+
+        /* Services Section */
+        .services-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .service-item {
+            background-color:	#fffafa;
+            padding: 20px;
+            border-radius: 8px;
+            flex: 1 1 250px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: side;
+            transition: transform 0.3s;
+        }
+
+        .service-item:hover {
+            transform: scale(1.01);
+        }
+
+        .service-item img {
+            width: 500px;
+            height: 400px;
+            margin-bottom: 20px;
+        }
+
+        /* Gallery Section Styling (Updated) */
+        .gallery-projects {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .project-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color:	#fffafa;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .project-item img,
+        {
+            width: 80%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 20px;
+           
+		
+        }
+
+        .project-details {
+            text-align: side;
+        }
+
+        .project-details h3 {
+            margin-bottom: 10px;
+            font-size: 1.8em;
+            color: #004080;
+        }
+
+        .project-details p {
+            font-size: 1.1em;
+            color: #333;
+            max-width: 800px;
+        }
+
+         /* Contact Section */
+        #contact {
+            padding: 60px 20px;
+            background-color:#5b7b7a;
+            color: white;
+            text-align: center;       
+ }
+
+    
+
+
+
+       
+       
+
+        /* Footer */
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .about-content {
+                flex-direction: column;
+            }
+
+            .navbar ul {
+                flex-direction: column;
+                background-color: #333;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                width: 200px;
+                display: none;
+            }
+
+            .navbar ul.active {
+                display: flex;
+            }
+
+            .navbar ul li {
+                margin: 10px 0;
+            }
+
+            .navbar .menu-toggle {
+                display: block;
+                cursor: pointer;
+            }
+        }
+
+        /* Menu Toggle (for mobile) */
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">NK DESIGNS</div>
+        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+        <ul id="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div>
+            
+            <h1>Developing Your Future With NK Designs</h1>
+            <i><p>Quality Construction Services You Can Trust</p></i>
+        </div>
+    </section>
+
+   <u> <!-- About Section --> </u>
+
+    <section class="about" id="about">
+        <h2>About Us</h2>
+        <div class="about-content">
+            <img src="file:///C:/Users/Abhishek.c/Downloads/pixelcut-export.png" alt="About Us">
+            <div>
+                <h3>NK designs, we provide a number of structural design solutions for a variety of projects. We build the foundations, beams, columns, and load-bearing walls of houses making sure every house is safe as well as beautiful. For the public objectives, we create beautiful forms that enclose large spaces and are built up to the safety norms. Moreover, we do performance based seismic upgrade of structures so as to ensure the structures meet the current standards. What we also admire is the ability to implement sustainable practices through the design of energy efficient structures using green materials and cutting edge technologies. It is important to stress that the structural designs made by our company do not only meet the main requirements of a structure but also increase the overall idea of each project.
+
+
+.</h3>
+                <h3>From residential buildings to commercial complexes, we handle projects of all sizes with precision and expertise.</h3> 
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <h2>Our Services</h2>
+        <div class="services-grid">
+            <div class="service-item">
+                <img src="file:///C:/Users/Abhishek.c/Downloads/Gemini_Generated_Image_wzi4pwwzi4pwwzi4.jpeg" alt="Service 1">
+                <h2>Structural Designs</h2>
+                <h3>Building your dream home with quality materials and craftsmanship.we provide a number of structural design solutions for a variety of projects. We build the foundations, beams, columns, and load-bearing walls of houses making sure every house is safe as well as beautiful. For the public objectives, we create beautiful forms that enclose large spaces and are built up to the safety norms. Moreover, we do performance based seismic upgrade of structures so as to ensure the structures meet the current standards. What we also admire is the ability to implement sustainable practices through the design of energy efficient structures using green materials and cutting edge technologies. It is important to stress that the structural designs made by our company do not only meet the main requirements of a structure but also increase the overall idea of each project.
+</h3>
+            </div>
+            <div class="service-item">
+                <img src="file:///C:/Users/Abhishek.c/OneDrive/Attachments/ai-generated-8266728_1280.webp" alt="Service 2">
+                <h2>Architectural Design</h2>
+                <h3>Architectural design is the comprehensive process of conceptualizing and planning the structure, form, and aesthetics of buildings and spaces. It integrates functionality, sustainability, and visual appeal, with a strong focus on user experience and environmental harmony. Our design philosophy is rooted in innovation, utilizing cutting-edge technology and timeless architectural principles to create enduring and inspiring spaces. Whether it's residential, commercial, or public architecture, we are committed to delivering thoughtful, sustainable, and visually striking solutions that enhance both the built environment and the quality of life for its users.</h3>
+            </div>
+            <div class="service-item">
+                <img src="file:///C:/Users/Abhishek.c/OneDrive/Attachments/ai-generated-8561123_960_720.jpg" alt="Service 3">
+                <h2>Building Estimations</h2>
+                <h3>Building estimation is a critical aspect of the construction process, involving the detailed forecasting of the costs and resources required to complete a project. This includes calculating material quantities, labor, equipment, and other essential factors to provide a comprehensive and accurate project budget. Our approach to building estimation is rooted in precision, utilizing advanced tools and industry best practices to ensure cost-effectiveness and efficiency. Whether for residential, commercial, or large-scale infrastructure projects, we deliver reliable and transparent estimates, empowering clients to make informed decisions and ensuring the smooth execution of the construction process from start to finish.</h3>
+            </div>
+            <div class="service-item">
+                <img src="file:///C:/Users/Abhishek.c/OneDrive/Attachments/208070424-generative-ai-architect-designer-interior-creative-working-hand-drawing-sketch-plan-blueprint.jpg" alt="Service 4">
+                <h2>Plans & Interior</h2>
+                <h3>Our process seamlessly blends architectural planning and interior design, ensuring that each project is approached with a holistic vision. Architectural planning serves as the foundation, focusing on the structure, layout, and technical requirements of the building. This involves careful consideration of spatial flow, structural integrity, safety regulations, and the functionality of the space. We work closely with clients to understand their unique requirements, ensuring that the design not only meets practical needs but also aligns with their vision.
+On the other hand, interior design plays a crucial role in enhancing the aesthetic and experiential aspects of the building. We prioritize materials, colors, lighting, and furnishings, ensuring that the interior space is both visually appealing and comfortable. Every design decision is made with a focus on functionality, style, and sustainability, ensuring that spaces are not only beautiful but also efficient and environmentally conscious.
+</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section (Updated) -->
+    <section class="gallery" id="gallery">
+        <h2>some of Our Projects</h2>
+        <div class="gallery-projects">
+            <!-- Project 1 -->
+            <div class="project-item">
+             
+                <div class="project-details">
+                    <h3> Government school</h3>
+                    <h4>We have developed a design of G+1 Government Girls Pre University College Building At Jamakandi. Complete with mordern amenities and energy efficient designs</h4>
+<h4>1)Functional Layout: Optimize space for classrooms, administrative offices, and recreational areas while ensuring ease of movement.</h4>
+<h4>2)Sustainable Materials: Use eco-friendly materials and energy-efficient designs (solar panels, natural ventilation, etc.) to reduce costs and environmental impact.</h4>
+<h4>3)Safety and Accessibility: Design with a focus on student safety, including emergency exits, ramps, and wide doorways for accessibility.</h4>
+<h4>4)Durability and Low Maintenance: Choose materials that are long-lasting and require minimal upkeep to reduce long-term costs.</h4>
+<h4>5)Community-Centric Spaces: Include multipurpose halls and outdoor areas that can be used for both school activities and community events.</h4>
+<h4>6)Natural Lighting and Ventilation: Maximize the use of natural light and air circulation to create a healthy and productive learning environment.</h4>
+<h4>7)Scalable Designs: Create flexible spaces that can adapt to future expansion or varying class sizes. .</h4>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-item">
+                
+                <div class="project-details">
+                    <h3> Residential Building</h3>
+                    <h4>We developed a G+1 residential building equipped with state-of-the-art facilities and designed for optimal workspace utilization.</h4>                                 <h4>1)Space Efficiency: Design the parking garage to maximize space, accommodating vehicles while maintaining smooth traffic flow and easy access to the building.</h4>
+<h4>2)Safety and Security: Incorporate proper lighting, surveillance, and secure entry points in the garage to ensure safety.</h4>
+<h4>3)Roof Utilization: Design the roof as a functional space, such as a terrace garden, recreational area, or solar panel installation to enhance sustainability.</h4>
+<h4>4)Aesthetic Integration: Seamlessly blend the parking garage and roof design with the overall architectural style of the building, ensuring they complement the structure.</h4>
+                </div>
+            </div>
+
+            </section>
+
+   <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email:@NKdesigns.com</p>
+        <p>Phone: 8971458209</p>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 NK DESIGNS. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+
+</body>
+</html>
